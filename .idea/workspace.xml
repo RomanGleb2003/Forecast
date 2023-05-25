@@ -5,7 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d320952f-1ea1-446e-aa44-f451e0c32430" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/screens/home/Forecast/Forecast.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/screens/home/Forecast/Forecast.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/screens/home/Forecast/WeatherCity.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/screens/home/Forecast/WeatherCity.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/screens/home/MultiUse/CityInfo.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/screens/home/MultiUse/CityInfo.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/screens/home/MultiUse/Current.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/screens/home/MultiUse/Current.tsx" afterDir="false" />
     </list>
@@ -123,7 +125,7 @@
       <updated>1682931808100</updated>
       <workItem from="1682931812740" duration="179585000" />
       <workItem from="1684183152741" duration="45254000" />
-      <workItem from="1684856078841" duration="7776000" />
+      <workItem from="1684856078841" duration="8852000" />
     </task>
     <servers />
   </component>
