@@ -36,7 +36,7 @@ const WeatherCity: FC = () => {
                                 </Button>
                             </Link>
                         </Box>
-                        <Forecast select={current?.forecast?.forecastday[0]}/>
+                        <Forecast select={current?.forecast?.forecast[0]}/>
                     </Box>
                 </Container>
             }
