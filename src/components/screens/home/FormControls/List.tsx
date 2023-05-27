@@ -11,22 +11,24 @@ const DropdownList :FC<ListProps>= ({cities, showDropdown, linkClick}) => {
     return (
         <List sx={{
             position: 'absolute',
-            width: '50%',
+            width: '80%',
             maxHeight: 300,
             overflow: 'auto',
             paddingRight: 14,
             top: 48,
-            color: 'secondary'
+            color: 'secondary',
+            zIndex: 150
         }}
               component='ul'>
             {showDropdown && cities?.map((city: any, index: number) => (
                 <li style={{
-                    height: 30,
+                    height: 40,
                     backgroundColor: '#fff',
                     color: 'inherit',
                     display: "flex",
                     border: '1px solid',
-                    textDecoration: 'none'
+                    textDecoration: 'none',
+                    cursor: 'pointer'
                 }}
                     onClick={() => linkClick(city.name)}
                     key={index}

@@ -30,7 +30,7 @@ const ForecastDay: FC<DayProps> = ({data, currentState, setCurrentState}) => {
                 borderRadius: '4px',
             },
             padding: '0 auto',
-            maxWidth: '960px',
+            maxWidth: '840px',
             marginBottom: '2px'
         }}>
             {

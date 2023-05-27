@@ -1,4 +1,4 @@
-import React, {FC} from 'react';
+import React, {FC, useState} from 'react';
 import {Box, Button, Container} from '@mui/material';
 import Link from "next/link";
 import {useAppDispatch, useAppSelector} from "@/hooks/redux";
@@ -15,14 +15,17 @@ const WeatherCity: FC = () => {
     const {city} = useAppSelector((state: RootState) => state.weather)
     const {weather: setWeather} = weatherAction
     const {data} = useGetCurrentQuery({q: city})
+    const [noCityFound, setNoCityFound] = useState(false);
     const linkClick = (city: string) => {
         dispatch(setWeather(city));
     }
+
     return (
         <Container>
             <Title/>
-            <FormControls/>
-            {data &&
+            <FormControls setNoCityFound={setNoCityFound}/>
+            {noCityFound && <Box component='h3' sx={{marginLeft: '5%', color: '#ee0505'}}>NO CITY!</Box>}
+            {!noCityFound && data &&
                 <Container>
                     <Box sx={{display: 'flex', margin: '0 5% 0 5%'}}>
                         <CityInfo city={data}/>

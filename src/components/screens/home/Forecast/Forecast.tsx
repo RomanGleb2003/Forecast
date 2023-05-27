@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import Current from "@/components/screens/home/MultiUse/Current";
 import {Box, Button, Paper} from "@mui/material";
 import Indexes from "@/components/screens/home/Forecast/DetailProps/Indexes";
@@ -6,10 +6,13 @@ import Hours from "@/components/screens/home/Forecast/DetailProps/Hours";
 import InfoForecast from "@/components/screens/home/Forecast/DetailProps/InfoForecast";
 import {useDispatch} from "react-redux";
 import {weatherAction} from "@/store/reducers/ForecastSlice";
+import {useAppSelector} from "@/hooks/redux";
+import {RootState} from "@/store/store";
 
 const Forecast = ({select}: { select: any }) => {
     const dispatch = useDispatch()
     const {degrees: setDegrees} = weatherAction
+    const {degrees} = useAppSelector((state: RootState) => state.weather)
     return (
         <Paper
             style={{
@@ -28,8 +31,18 @@ const Forecast = ({select}: { select: any }) => {
             }}
         >
             <Box sx={{display: 'flex', gap: '5px'}}>
-                <Button variant="contained" onClick={() => dispatch(setDegrees(true))}>&deg;C</Button>
-                <Button variant="contained" onClick={() => dispatch(setDegrees(false))}>&deg;F</Button>
+                <Button
+                    sx={{backgroundColor: degrees ? '#0923c2' : 'none'}}
+                    variant="contained"
+                    onClick={() => dispatch(setDegrees(true))}>
+                    &deg;C
+                </Button>
+                <Button
+                    sx={{backgroundColor: !degrees ? '#0923c2' : 'none'}}
+                    variant="contained"
+                    onClick={() => dispatch(setDegrees(false))}>
+                    &deg;F
+                </Button>
             </Box>
             <Current current={select}/>
             <Box sx={{display: 'flex', flexDirection: 'row'}}>

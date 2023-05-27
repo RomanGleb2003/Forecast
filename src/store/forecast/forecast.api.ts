@@ -7,12 +7,12 @@ export const weatherApi = createApi({
     endpoints: (build) => ({
         getCity: build.query<IRoot, string>({
            query: (q: string = 'london') => ({
-               url: `/search.json?&key=192344d4755f4dcda5a125134232005&q=${q}`
+               url: `/search.json?&key=a1a99f8c99ab4abc808173021232705&q=${q}`
            })
         }),
         getCurrent: build.query<IRoot,{ q: string }>({
             query: ({q = 'London'}) => ({
-                url: `/forecast.json?&key=192344d4755f4dcda5a125134232005`,
+                url: `/forecast.json?&key=a1a99f8c99ab4abc808173021232705`,
                 params: {
                     q
                 },
@@ -20,7 +20,7 @@ export const weatherApi = createApi({
         }),
         getWeather: build.query<IRoot,{ q: string, days: number }>({
             query: ({ q = 'London', days = 7 }) => ({
-                url: `/forecast.json?&key=192344d4755f4dcda5a125134232005`,
+                url: `/forecast.json?&key=a1a99f8c99ab4abc808173021232705`,
                 params: {
                     q,
                     days: days,

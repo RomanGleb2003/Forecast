@@ -40,10 +40,10 @@ const WeatherDetail: FC = () => {
                         </Link>
                     </Box>
                     <Box sx={{display: 'flex', gap: '7px', padding: '5px', marginLeft: '5%'}}>
-                        <Button variant="contained" size='small' onClick={() => daysClick('7')}>
+                        <Button sx={{backgroundColor: days === 7? '#0923c2' : 'none'}} variant="contained" size='small' onClick={() => daysClick('7')}>
                             7 days
                         </Button>
-                        <Button variant="contained" size='small' onClick={() => daysClick('14')}>
+                        <Button sx={{backgroundColor: days > 7? '#0923c2' : 'none'}} variant="contained" size='small' onClick={() => daysClick('14')}>
                             14 days
                         </Button>
                     </Box>
