@@ -24,7 +24,7 @@ const FormControls: FC<FormProps> = ({ setNoCityFound }) => {
     const linkClick = (city: string) => {
         dispatch(setWeather(city));
         setShowDropdown(false);
-        if (cities && cities.length === 0) {
+        if (cities && (cities?.length === 0)) {
             setNoCityFound(true);
         } else {
             setNoCityFound(false);
@@ -43,7 +43,7 @@ const FormControls: FC<FormProps> = ({ setNoCityFound }) => {
             />
             <Button
                 sx={{ width: '20%', height: '50px' }}
-                onClick={() => linkClick(cities[0]?.name)}
+                onClick={() => linkClick(cities && Array.isArray(cities) && cities.length > 0 ? cities[0].name : '')}
                 color="secondary"
                 size="large"
                 variant="contained"

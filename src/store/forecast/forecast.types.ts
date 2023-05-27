@@ -2,6 +2,7 @@ export interface IRoot {
     location: Location
     current: Current
     forecast: Forecast
+    length: number
 }
 
 export interface Location {

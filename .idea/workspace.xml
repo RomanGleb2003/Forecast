@@ -27,6 +27,7 @@
       <change beforePath="$PROJECT_DIR$/src/components/screens/home/WeatherDetail/WeatherDetail.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/screens/home/WeatherDetail/WeatherDetail.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/days/[id].tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/days/[id].tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/store/forecast/forecast.api.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/forecast/forecast.api.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/forecast/forecast.types.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/forecast/forecast.types.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/store/reducers/ForecastSlice.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/reducers/ForecastSlice.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -143,7 +144,7 @@
       <updated>1682931808100</updated>
       <workItem from="1682931812740" duration="179585000" />
       <workItem from="1684183152741" duration="45254000" />
-      <workItem from="1684856078841" duration="44125000" />
+      <workItem from="1684856078841" duration="45000000" />
     </task>
     <servers />
   </component>
