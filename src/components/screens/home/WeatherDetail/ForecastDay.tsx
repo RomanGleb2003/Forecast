@@ -48,8 +48,8 @@ const ForecastDay: FC<DayProps> = ({data, currentState, setCurrentState}) => {
                                      backgroundColor: (index !== currentState ? '#59efce' : '#8ff62e')
                                  }}
                     >
-                        <Box>{`${date.getDate()}`}</Box>
-                        <Box>{month}</Box>
+                        <Box sx={{color: '#f50404', fontWeight: 'bold', width: '20px', margin: '0 auto'}}>{`${date.getDate()}`}</Box>
+                        <Box sx={{color: '#0a72f6', width: '30px', margin: '0 auto'}}>{month}</Box>
                         <img src={day.day.condition.icon} alt=""/>
                         <Box>min.{day.day.mintemp_c} </Box>
                         <Box> max.{day.day.maxtemp_c}</Box>
