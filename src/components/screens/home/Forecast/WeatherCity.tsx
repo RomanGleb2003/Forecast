@@ -14,30 +14,28 @@ const WeatherCity: FC = () => {
     const dispatch = useAppDispatch()
     const {city} = useAppSelector((state: RootState) => state.weather)
     const {weather: setWeather} = weatherAction
-    const {data: current} = useGetCurrentQuery({q: city})
+    const {data} = useGetCurrentQuery({q: city})
     const linkClick = (city: string) => {
         dispatch(setWeather(city));
     }
     return (
         <Container>
             <Title/>
-            <FormControls />
-            {current &&
+            <FormControls/>
+            {data &&
                 <Container>
-                    <Box>
-                        <Box>
-                            <CityInfo city={current}/>
-                            <Link href='/detailPage'>
-                                <Button color="secondary"
-                                        size="medium"
-                                        variant="contained"
-                                        onClick={() => linkClick(city)}>
-                                    Detail Weather
-                                </Button>
-                            </Link>
-                        </Box>
-                        <Forecast select={current?.forecast?.forecastday[0]}/>
+                    <Box sx={{display: 'flex', margin: '0 5% 0 5%'}}>
+                        <CityInfo city={data}/>
+                        <Link href='/detailPage'>
+                            <Button color="secondary"
+                                    size="small"
+                                    variant="contained"
+                                    onClick={() => linkClick(city)}>
+                                Detail Weather
+                            </Button>
+                        </Link>
                     </Box>
+                    <Forecast select={data?.forecast?.forecastday[0]}/>
                 </Container>
             }
         </Container>

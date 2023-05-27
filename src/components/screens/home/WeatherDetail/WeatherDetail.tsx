@@ -12,37 +12,46 @@ import ForecastDay from "@/components/screens/home/WeatherDetail/ForecastDay";
 
 
 const WeatherDetail: FC = () => {
-        const dispatch = useAppDispatch()
-        const {days: setDays} = weatherAction
-        const {days} = useAppSelector((state: RootState) => state.weather)
-        const {city} = useAppSelector((state: RootState) => state.weather)
-        const {data, isLoading} = useGetWeatherQuery({q: city, days: days});
-        const [currentState, setCurrentState] = useState<number>(0)
-        const daysClick = (days: number) => {
-            dispatch(setDays(days))
-            setCurrentState(0)
-        }
-        const curr = data?.forecast.forecastday[currentState]
-        return (
-            <Box>
-                {isLoading ? <LinearProgress sx={{top: -8}} color="secondary"/> :
-                    <Container sx={{margin: '0 auto'}}>
-                        <Title/>
+    const dispatch = useAppDispatch()
+    const {days: setDays} = weatherAction
+    const {days} = useAppSelector((state: RootState) => state.weather)
+    const {city} = useAppSelector((state: RootState) => state.weather)
+    const {data, isLoading} = useGetWeatherQuery({q: city, days: days});
+    const [currentState, setCurrentState] = useState<number>(0)
+    const daysClick = (days: string) => {
+        const daysNumber = parseFloat(days);
+        dispatch(setDays(daysNumber));
+        setCurrentState(0);
+    }
+    const curr = data?.forecast.forecastday[currentState]
+    return (
+        <Container>
+            {isLoading ? <LinearProgress sx={{top: -8}} color="secondary"/> :
+                <Container sx={{maxWidth: '860px'}}>
+                    <Title/>
+                    <Box sx={{display: 'flex', margin: '0 5% 0 5%'}}>
                         <CityInfo city={data}/>
-                        <Button onClick={() => daysClick(7)}>7 days</Button>
-                        <Button onClick={() => daysClick(14)}>14 days</Button>
                         <Link href='/'>
                             <Button
-                                color="secondary"
+                                color='secondary'
                                 size="medium"
                                 variant="contained"
                             >Home</Button>
                         </Link>
-                        <ForecastDay data={data} currentState={currentState} setCurrentState={setCurrentState}/>
-                        <Forecast select={curr}/>
-                    </Container>}
-            </Box>
-        );
-    };
+                    </Box>
+                    <Box sx={{display: 'flex', gap: '7px', padding: '5px', marginLeft: '5%'}}>
+                        <Button variant="contained" size='small' onClick={() => daysClick('7')}>
+                            7 days
+                        </Button>
+                        <Button variant="contained" size='small' onClick={() => daysClick('14')}>
+                            14 days
+                        </Button>
+                    </Box>
+                    <ForecastDay data={data} currentState={currentState} setCurrentState={setCurrentState}/>
+                    <Forecast select={curr}/>
+                </Container>}
+        </Container>
+    );
+};
 
 export default WeatherDetail;

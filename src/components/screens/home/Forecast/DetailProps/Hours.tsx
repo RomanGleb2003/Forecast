@@ -2,12 +2,12 @@ import React, {FC} from 'react';
 import {Box} from "@mui/material";
 
 const Hours: FC = () => {
-    const numbers = [0, 3, 6, 9, 12, 15, 18, 21]
+    const numbers = Array.from({length: 24}, (_, index) => index)
     return (
-        <Box sx={{display: 'flex', gap: '35px', marginLeft: '22px'}}>
+        <Box sx={{display: 'flex', marginTop: '25px'}}>
             {
                 numbers.map(el => {
-                    return <Box>{el} :00</Box>
+                    return <Box sx={{width: '30px', marginLeft: '40px'}}>{el}:00</Box>
                 })
             }
         </Box>

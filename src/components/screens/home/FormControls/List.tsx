@@ -2,7 +2,7 @@ import React, {FC} from 'react';
 import {List} from "@mui/material";
 
 interface ListProps{
-    cities: object,
+    cities: any,
     showDropdown: boolean,
     linkClick: (city: string)=> void
 }
@@ -19,10 +19,10 @@ const DropdownList :FC<ListProps>= ({cities, showDropdown, linkClick}) => {
             color: 'secondary'
         }}
               component='ul'>
-            {showDropdown && cities?.map((city, index) => (
+            {showDropdown && cities?.map((city: any, index: number) => (
                 <li style={{
                     height: 30,
-                    backgroundColor: 'white',
+                    backgroundColor: '#fff',
                     color: 'inherit',
                     display: "flex",
                     border: '1px solid',

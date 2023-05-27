@@ -5,11 +5,29 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d320952f-1ea1-446e-aa44-f451e0c32430" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/postcss.config.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/screens/UI/TempProgress.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/screens/home/Forecast/DetailProps/Hours.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/screens/home/Forecast/DetailProps/Hours.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/screens/home/Forecast/DetailProps/Indexes.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/screens/home/Forecast/DetailProps/Indexes.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/screens/home/Forecast/DetailProps/InfoForecast.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/screens/home/Forecast/DetailProps/InfoForecast.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/screens/home/Forecast/DetailProps/Times.tsx" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/screens/home/Forecast/Forecast.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/screens/home/Forecast/Forecast.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/screens/home/Forecast/WeatherCity.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/screens/home/Forecast/WeatherCity.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/screens/home/FormControls/FormControl.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/screens/home/FormControls/FormControl.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/screens/home/FormControls/List.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/screens/home/FormControls/List.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/screens/home/Home.module.css" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/screens/home/MultiUse/CityInfo.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/screens/home/MultiUse/CityInfo.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/screens/home/MultiUse/Current.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/screens/home/MultiUse/Current.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/screens/home/MultiUse/Title.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/screens/home/MultiUse/Title.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/screens/home/WeatherDetail/ForecastDay.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/screens/home/WeatherDetail/ForecastDay.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/screens/home/WeatherDetail/WeatherDetail.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/screens/home/WeatherDetail/WeatherDetail.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/days/[id].tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/days/[id].tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/forecast/forecast.api.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/forecast/forecast.api.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/reducers/ForecastSlice.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/reducers/ForecastSlice.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -125,7 +143,7 @@
       <updated>1682931808100</updated>
       <workItem from="1682931812740" duration="179585000" />
       <workItem from="1684183152741" duration="45254000" />
-      <workItem from="1684856078841" duration="8852000" />
+      <workItem from="1684856078841" duration="36566000" />
     </task>
     <servers />
   </component>

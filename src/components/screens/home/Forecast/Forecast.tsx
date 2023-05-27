@@ -1,22 +1,59 @@
 import React from 'react';
 import Current from "@/components/screens/home/MultiUse/Current";
-import {Box} from "@mui/material";
+import {Box, Button, Paper} from "@mui/material";
 import Indexes from "@/components/screens/home/Forecast/DetailProps/Indexes";
-import Times from "@/components/screens/home/Forecast/DetailProps/Times";
 import Hours from "@/components/screens/home/Forecast/DetailProps/Hours";
 import InfoForecast from "@/components/screens/home/Forecast/DetailProps/InfoForecast";
+import {useDispatch} from "react-redux";
+import {weatherAction} from "@/store/reducers/ForecastSlice";
 
-const Forecast = ({select}: {select: any}) => {
+const Forecast = ({select}: { select: any }) => {
+    const dispatch = useDispatch()
+    const {degrees: setDegrees} = weatherAction
     return (
-        <Box sx={{display: 'flex',height: '350px',maxWidth: '850px', backgroundColor: 'purple', color: 'white', borderRadius: "7px", padding: '5%', overflowY: 'auto'}}>
-            <Current current={select}/>
-            <Indexes />
-            <Box sx={{position: 'relative', top: '5px'}}>
-                <Times />
-                <Hours />
-                <InfoForecast select={select}/>
+        <Paper
+            style={{
+                backgroundImage: `url(https://cdn.weatherapi.com/weather-widget/img/weatherapi-backgrounds/4_widget4.png)`
+            }}
+            sx={{
+                display: 'flex',
+                flexDirection: 'column',
+                justifyContent: 'center',
+                height: '450px',
+                maxWidth: '730px',
+                color: 'white',
+                borderRadius: "7px",
+                padding: '5%',
+                overflowX: 'hidden',
+            }}
+        >
+            <Box sx={{display: 'flex', gap: '5px'}}>
+                <Button variant="contained" onClick={() => dispatch(setDegrees(true))}>&deg;C</Button>
+                <Button variant="contained" onClick={() => dispatch(setDegrees(false))}>&deg;F</Button>
             </Box>
-        </Box>
+            <Current current={select}/>
+            <Box sx={{display: 'flex', flexDirection: 'row'}}>
+                <Indexes/>
+                <Box sx={{
+                    overflowX: 'auto', marginLeft: '5px', position: 'relative', top: '5px', overflowY: 'auto',
+                    '&::-webkit-scrollbar': {
+                        width: '8px',
+                        height: '8px'
+                    },
+                    '&::-webkit-scrollbar-thumb': {
+                        background: 'purple',
+                        borderRadius: '4px',
+                    },
+                    '&::-webkit-scrollbar-track': {
+                        background: 'lightGray',
+                        borderRadius: '4px',
+                    },
+                }}>
+                    <Hours/>
+                    <InfoForecast select={select}/>
+                </Box>
+            </Box>
+        </Paper>
     );
 };
 
