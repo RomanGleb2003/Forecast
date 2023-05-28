@@ -32,13 +32,13 @@ const Forecast = ({select}: { select: any }) => {
         >
             <Box sx={{display: 'flex', gap: '5px'}}>
                 <Button
-                    sx={{backgroundColor: degrees ? '#0923c2' : 'none'}}
+                    sx={{backgroundColor: degrees ? 'none' : '#c608d3'}}
                     variant="contained"
                     onClick={() => dispatch(setDegrees(true))}>
                     &deg;C
                 </Button>
                 <Button
-                    sx={{backgroundColor: !degrees ? '#0923c2' : 'none'}}
+                    sx={{backgroundColor: !degrees ? 'none' : '#c608d3'}}
                     variant="contained"
                     onClick={() => dispatch(setDegrees(false))}>
                     &deg;F

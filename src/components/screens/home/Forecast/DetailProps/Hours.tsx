@@ -6,8 +6,8 @@ const Hours: FC = () => {
     return (
         <Box sx={{display: 'flex', marginTop: '25px'}}>
             {
-                numbers.map(el => {
-                    return <Box sx={{width: '30px', marginLeft: '40px'}}>{el}:00</Box>
+                numbers.map((el, index) => {
+                    return <Box sx={{width: '30px', marginLeft: '40px'}} key={index}>{el}:00</Box>
                 })
             }
         </Box>

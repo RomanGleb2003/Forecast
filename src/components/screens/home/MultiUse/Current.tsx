@@ -20,11 +20,11 @@ const Current: FC<CurrentProps> = ({current}) => {
                 <Box>{current?.date}</Box>
                 {degrees ?
                     <Box sx={{fontSize: '110%', fontWeight: 'bold', marginTop: '5px'}}>
-                        {currentTemp.temp_c}&deg;C
+                        {currentTemp?.temp_c}&deg;C
                     </Box>
                     :
                     <Box sx={{fontSize: '110%', fontWeight: 'bold', marginTop: '5px'}}>
-                        {currentTemp.temp_f}&deg;F
+                        {currentTemp?.temp_f}&deg;F
                     </Box>
                 }
                 <Box sx={{fontWeight: '200'}}>{currentText}</Box>

@@ -12,7 +12,7 @@ const InfoForecast = ({select}: { select: any }) => {
     date.setHours(date.getHours());
     return (
         <Box sx={{display: 'flex'}}>
-            {hour?.map(item => {
+            {hour?.map((item, index) => {
                 return <Box sx={{
                     width: '50px',
                     paddingTop: '7px',
@@ -22,7 +22,7 @@ const InfoForecast = ({select}: { select: any }) => {
                     gap: '15px',
                     paddingBottom: '10px',
                     marginLeft: '15px'
-                }}>
+                }} key={index}>
                     <Box sx={{display: 'flex', justifyContent: 'center'}}>
                         <img style={{width: '45px'}}
                              src={item.condition.icon} alt=""/>

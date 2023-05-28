@@ -7,32 +7,36 @@ interface ListProps{
     linkClick: (city: string)=> void
 }
 
+
 const DropdownList :FC<ListProps>= ({cities, showDropdown, linkClick}) => {
     return (
         <List sx={{
             position: 'absolute',
-            width: '80%',
+            width: '79%',
             maxHeight: 300,
             overflow: 'auto',
-            paddingRight: 14,
-            top: 48,
+            top: '32px',
             color: 'secondary',
-            zIndex: 150
+            zIndex: 150,
         }}
               component='ul'>
-            {showDropdown && cities?.map((city: any, index: number) => (
-                <li style={{
+            {showDropdown && cities?.map((city: any) => (
+                <button style={{
                     height: 40,
                     backgroundColor: '#fff',
+                    width: '100%',
                     color: 'inherit',
                     display: "flex",
+                    justifyContent: 'center',
+                    alignItems: 'center',
                     border: '1px solid',
                     textDecoration: 'none',
-                    cursor: 'pointer'
+                    cursor: 'pointer',
+                    textAlign: 'center'
                 }}
                     onClick={() => linkClick(city.name)}
-                    key={index}
-                >{city.name}/{city.country}</li>
+                    key={city.id}
+                >{city.name}/{city.country}</button>
             ))}
         </List>
     );

@@ -2,7 +2,7 @@ import  React, { FC, useState } from 'react';
 import { Button, FormControl, LinearProgress, TextField } from '@mui/material';
 import { useAppDispatch } from '@/hooks/redux';
 import { weatherAction } from '@/store/reducers/ForecastSlice';
-import { useGetCityQuery } from '@/store/forecast/forecast.api';
+import {useGetCityQuery} from '@/store/forecast/forecast.api';
 import DropdownList from '@/components/screens/home/FormControls/List';
 
 interface FormProps {
@@ -33,19 +33,20 @@ const FormControls: FC<FormProps> = ({ setNoCityFound }) => {
     };
 
     return (
-        <FormControl sx={{ display: 'flex', flexDirection: 'row', maxWidth: '600px', width: '90%', margin: '5%' }}>
+        <FormControl sx={{ display: 'flex', flexDirection: 'row', maxWidth: '600px', width: '90%', margin: '5%', gap: '1%'}}>
             <TextField
-                sx={{ width: '80%' }}
+                sx={{ width: '79%'}}
                 placeholder="Please enter city..."
+                size='small'
                 type="text"
                 value={query}
                 onChange={handleInputChange}
             />
             <Button
-                sx={{ width: '20%', height: '50px' }}
+                sx={{ width: '20%'}}
                 onClick={() => linkClick(cities && Array.isArray(cities) && cities.length > 0 ? cities[0].name : '')}
                 color="secondary"
-                size="large"
+                size="small"
                 variant="contained"
             >
                 Search

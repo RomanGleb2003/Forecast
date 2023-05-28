@@ -7,7 +7,7 @@ const Title: FC = () => {
             <img style={{maxWidth: '200px', width: '50%', height: '20%', marginLeft: '20px'}}
                  src="https://sinst.fwdcdn.com/img/weatherImg/b/d300.jpg"
                  alt=""/>
-            <h1 style={{color: '#4793ff', margin: '5%'}}>Romeo Weather</h1>
+            <h1 style={{color: '#4793ff', margin: '5%'}}>Weather App</h1>
         </Container>
     );
 };

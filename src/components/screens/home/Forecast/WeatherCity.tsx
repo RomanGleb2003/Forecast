@@ -27,7 +27,7 @@ const WeatherCity: FC = () => {
             {noCityFound && <Box component='h3' sx={{marginLeft: '5%', color: '#ee0505'}}>NO CITY!</Box>}
             {!noCityFound && data &&
                 <Container>
-                    <Box sx={{display: 'flex', margin: '0 5% 0 5%'}}>
+                    <Box sx={{display: 'flex',maxWidth: '600px',margin: '5% 0 0 5%', width: '95%', gap: '3%'}}>
                         <CityInfo city={data}/>
                         <Link href='/detailPage'>
                             <Button color="secondary"

@@ -3,7 +3,6 @@ import {useGetWeatherQuery} from "@/store/forecast/forecast.api";
 import {Box, Button, Container, LinearProgress,} from "@mui/material";
 import {useAppDispatch, useAppSelector} from "@/hooks/redux";
 import {RootState} from "@/store/store";
-import Link from "next/link";
 import {weatherAction} from "@/store/reducers/ForecastSlice";
 import Title from "@/components/screens/home/MultiUse/Title";
 import CityInfo from "@/components/screens/home/MultiUse/CityInfo";
@@ -31,24 +30,23 @@ const WeatherDetail: FC = () => {
                     <Title/>
                     <Box sx={{display: 'flex', margin: '0 5% 0 5%'}}>
                         <CityInfo city={data}/>
-                        <Link href='/'>
-                            <Button
-                                color='secondary'
-                                size="medium"
-                                variant="contained"
-                            >Home</Button>
-                        </Link>
                     </Box>
-                    <Box sx={{display: 'flex', gap: '7px', padding: '5px', marginLeft: '5%'}}>
-                        <Button sx={{backgroundColor: days === 7? '#0923c2' : 'none'}} variant="contained" size='small' onClick={() => daysClick('7')}>
+                    {data && <Box sx={{display: 'flex', gap: '7px', padding: '5px', marginLeft: '4.5%'}}>
+                        <Button sx={{backgroundColor: days === 7 ? 'none' : '#c608d3'}} variant="contained" size='small'
+                                onClick={() => daysClick('7')}>
                             7 days
                         </Button>
-                        <Button sx={{backgroundColor: days > 7? '#0923c2' : 'none'}} variant="contained" size='small' onClick={() => daysClick('14')}>
+                        <Button sx={{backgroundColor: days > 7 ? 'none' : '#c608d3'}} variant="contained" size='small'
+                                onClick={() => daysClick('14')}>
                             14 days
                         </Button>
-                    </Box>
-                    <ForecastDay data={data} currentState={currentState} setCurrentState={setCurrentState}/>
-                    <Forecast select={curr}/>
+                        <Button href='/'
+                                size="small"
+                                variant="contained"
+                        >Home</Button>
+                    </Box>}
+                    {data && <ForecastDay data={data} currentState={currentState} setCurrentState={setCurrentState}/>}
+                    { data && <Forecast select={curr}/>}
                 </Container>}
         </Container>
     );
